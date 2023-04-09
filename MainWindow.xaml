@@ -1,0 +1,48 @@
+﻿<Window x:Class="Vigenere_Cipher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vigenere_Cipher"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\LenovoPC\Desktop\vigenerecipher/imitationgame.jpg" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="4" TextAlignment="Center"
+                 VerticalAlignment="Center"  FontFamily="impact" FontSize="30" Text="WELCOME TO VIGENERE" Foreground="AliceBlue"/>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="4" TextAlignment="Center"
+                 VerticalAlignment="Center"  FontFamily="impact" FontSize="20" Text="Fill in the required boxes below for VIGENERE to encrypt/decrypt your message" Foreground="AliceBlue"/>
+        <TextBlock Grid.Row="2" FontSize="25" Text="Insert your message here:" Grid.ColumnSpan="2" Margin="23,4,80,50" Grid.RowSpan="2" Foreground="AliceBlue"/>
+        <TextBlock Grid.Row="3" FontSize="25" Text="Insert your key here:" Grid.ColumnSpan="2" Margin="23,4,135,49" Grid.RowSpan="2" Foreground="AliceBlue"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="5" Height="50" 
+                  Width="200" Name="plaintextbox" Margin="111,4,89,54" Grid.RowSpan="2"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" BorderThickness="5" Height="50" 
+                  Width="200" Name="keybox" Margin="111,53,89,5" Grid.RowSpan="2"></TextBox>
+        <Button Grid.Row="4" FontSize="20"
+                 Click="MainCypherer" x:Name="encryptbutton" Grid.ColumnSpan="2" Margin="83,22,31,33" Grid.RowSpan="2" Content="Press to encrypt your message" Background="CornflowerBlue" />
+        <Button Grid.Row="6" FontSize="20"
+                 Click="MainCypherer" x:Name="decryptbutton" Grid.ColumnSpan="2" Margin="83,0,31,54" Grid.RowSpan="2" Content="Press to decrypt your cipher" Background="CornflowerBlue"/>
+        <TextBlock Grid.Row="4" Grid.Column="2" 
+                 Width="185" Height="48" Name="ciphertext" RenderTransformOrigin="0.465,1.279" Margin="8,25,8,36" Grid.RowSpan="2" Background="AliceBlue"></TextBlock>
+        <TextBlock Grid.Row="6" Grid.Column="2"
+                 Width="185" Height="48" Name="decryptedtext" RenderTransformOrigin="0.496,0.774" Margin="8,0,7,6" Background="AliceBlue"></TextBlock>
+    </Grid>
+</Window>
